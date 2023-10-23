@@ -11,6 +11,11 @@ class Post extends Model
     use HasFactory;
     use SoftDeletes;
     
+    protected $fillable = [
+    'title',
+    'body',
+    ];
+    
     public function getPaginateByLimit(int $limit_count = 10)
     {
     // updated_atで降順に並べたあと、limitで件数制限をかける
